@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:font_awesome_flutter/font_awesome_flutter.dart";
 import "package:notion_app/pages/home/home_page.dart";
+import "package:notion_app/pages/inbox/inbox_page.dart";
 import "package:notion_app/pages/search/search_page.dart";
 import "package:notion_app/resources/colors.dart";
 
@@ -16,10 +17,7 @@ class _MainPageState extends State<MainPage> {
   List<Widget> pages = const [
     HomePage(),
     SearchPage(),
-    Text(
-      "main3",
-      style: TextStyle(color: Colors.white),
-    ),
+    InboxPage(),
     Text(
       "main4",
       style: TextStyle(color: Colors.white),
