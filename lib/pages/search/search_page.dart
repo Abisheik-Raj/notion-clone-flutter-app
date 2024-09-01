@@ -20,6 +20,9 @@ class SearchPage extends StatelessWidget {
                   SearchResultComponent(day: "Today"),
                   SearchResultComponent(day: "Yesterday"),
                   SearchResultComponent(day: "30-August-2024"),
+                  const SizedBox(
+                    height: 150,
+                  ),
                 ],
               ),
             ),
