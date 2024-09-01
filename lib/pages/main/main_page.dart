@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:font_awesome_flutter/font_awesome_flutter.dart";
-import "package:notion_app/pages/home_page.dart";
+import "package:notion_app/pages/home/home_page.dart";
+import "package:notion_app/pages/search/search_page.dart";
 import "package:notion_app/resources/colors.dart";
 
 class MainPage extends StatefulWidget {
@@ -14,10 +15,7 @@ class _MainPageState extends State<MainPage> {
   int selectedIndex = 0;
   List<Widget> pages = const [
     HomePage(),
-    Text(
-      "main2",
-      style: TextStyle(color: Colors.white),
-    ),
+    SearchPage(),
     Text(
       "main3",
       style: TextStyle(color: Colors.white),

@@ -1,8 +1,8 @@
 import "package:flutter/material.dart";
 import "package:flutter/widgets.dart";
-import "package:notion_app/components/private_file_component.dart";
-import "package:notion_app/components/public_file_component.dart";
-import "package:notion_app/components/recent_component.dart";
+import "package:notion_app/pages/home/components/private_file_component.dart";
+import "package:notion_app/pages/home/components/public_file_component.dart";
+import "package:notion_app/pages/home/components/recent_component.dart";
 import "package:notion_app/resources/colors.dart";
 
 class HomePage extends StatefulWidget {
