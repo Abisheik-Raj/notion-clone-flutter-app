@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "package:font_awesome_flutter/font_awesome_flutter.dart";
 import "package:notion_app/pages/home/home_page.dart";
 import "package:notion_app/pages/inbox/inbox_page.dart";
+import "package:notion_app/pages/note/note_page.dart";
 import "package:notion_app/pages/search/search_page.dart";
 import "package:notion_app/resources/colors.dart";
 
@@ -18,8 +19,9 @@ class _MainPageState extends State<MainPage> {
     HomePage(),
     SearchPage(),
     InboxPage(),
+    NotePage(),
     Text(
-      "main4",
+      "vitian",
       style: TextStyle(color: Colors.white),
     ),
   ];
@@ -92,6 +94,25 @@ class _MainPageState extends State<MainPage> {
                     FontAwesomeIcons.pen,
                     size: 23,
                     color: Colors.white,
+                  ),
+                  label: '',
+                ),
+                BottomNavigationBarItem(
+                  icon: Image(
+                    color: lightGreyColor,
+                    height: 35,
+                    width: 35,
+                    image: AssetImage(
+                      "assets/images/v.png",
+                    ),
+                  ),
+                  activeIcon: Image(
+                    color: Colors.white,
+                    height: 35,
+                    width: 35,
+                    image: AssetImage(
+                      "assets/images/v.png",
+                    ),
                   ),
                   label: '',
                 )
