@@ -4,6 +4,7 @@ import "package:notion_app/pages/home/home_page.dart";
 import "package:notion_app/pages/inbox/inbox_page.dart";
 import "package:notion_app/pages/note/note_page.dart";
 import "package:notion_app/pages/search/search_page.dart";
+import "package:notion_app/pages/vitian/vitian_page.dart";
 import "package:notion_app/resources/colors.dart";
 
 class MainPage extends StatefulWidget {
@@ -15,15 +16,12 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int selectedIndex = 0;
-  List<Widget> pages = const [
-    HomePage(),
-    SearchPage(),
-    InboxPage(),
-    NotePage(),
-    Text(
-      "vitian",
-      style: TextStyle(color: Colors.white),
-    ),
+  List<Widget> pages = [
+    const HomePage(),
+    const SearchPage(),
+    const InboxPage(),
+    const NotePage(),
+    VitianPage(),
   ];
 
   void onTap(index) {
