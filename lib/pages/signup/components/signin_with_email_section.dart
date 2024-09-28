@@ -2,18 +2,24 @@
 
 import "package:flutter/material.dart";
 import "package:notion_app/firebase/auth_methods.dart";
-import "package:notion_app/pages/main/main_page.dart";
 import "package:notion_app/resources/colors.dart";
 import "package:provider/provider.dart";
 
-class SignInWithEmailSection extends StatelessWidget {
-  const SignInWithEmailSection({super.key});
+class SignInWithEmailSection extends StatefulWidget {
+  Function toggleContinuePressed;
+  SignInWithEmailSection({super.key, required this.toggleContinuePressed});
+
+  @override
+  State<SignInWithEmailSection> createState() => _SignInWithEmailSectionState();
+}
+
+class _SignInWithEmailSectionState extends State<SignInWithEmailSection> {
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
-    TextEditingController emailController = TextEditingController();
-    TextEditingController passwordController = TextEditingController();
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -106,9 +112,9 @@ class SignInWithEmailSection extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () async {
+            widget.toggleContinuePressed(true);
             final AuthMethods authMethods =
                 Provider.of<AuthMethods>(context, listen: false);
-
             try {
               await authMethods.create(
                   emailController.text, passwordController.text);
@@ -117,6 +123,7 @@ class SignInWithEmailSection extends StatelessWidget {
             } finally {
               emailController.clear();
               passwordController.clear();
+              widget.toggleContinuePressed(false);
             }
           },
           child: Container(

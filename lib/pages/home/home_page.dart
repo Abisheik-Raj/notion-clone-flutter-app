@@ -1,10 +1,15 @@
+// ignore_for_file: avoid_print
+
 import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
 import "package:flutter/widgets.dart";
+import "package:notion_app/firebase/auth_methods.dart";
 import "package:notion_app/pages/home/components/private_file_component.dart";
 import "package:notion_app/pages/home/components/public_file_component.dart";
 import "package:notion_app/pages/home/components/recent_component.dart";
 import "package:notion_app/resources/colors.dart";
+import "package:popover/popover.dart";
+import "package:provider/provider.dart";
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -74,11 +79,14 @@ class _HomePageState extends State<HomePage> {
           ),
           actions: [
             Padding(
-              padding: EdgeInsets.only(left: 0, top: 10, bottom: 0, right: 15),
+              padding:
+                  const EdgeInsets.only(left: 0, top: 10, bottom: 0, right: 15),
               child: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Provider.of<AuthMethods>(context, listen: false).logout();
+                },
                 child: const Icon(
-                  Icons.more_horiz,
+                  Icons.logout,
                   color: Colors.white,
                 ),
               ),

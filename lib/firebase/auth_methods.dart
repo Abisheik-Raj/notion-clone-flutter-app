@@ -39,4 +39,8 @@ class AuthMethods extends ChangeNotifier {
       throw Exception(err.code);
     }
   }
+
+  void logout() {
+    firebaseAuth.signOut();
+  }
 }
