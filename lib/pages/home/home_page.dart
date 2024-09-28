@@ -1,3 +1,4 @@
+import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
 import "package:flutter/widgets.dart";
 import "package:notion_app/pages/home/components/private_file_component.dart";
@@ -71,12 +72,15 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          actions: const [
+          actions: [
             Padding(
               padding: EdgeInsets.only(left: 0, top: 10, bottom: 0, right: 15),
-              child: Icon(
-                Icons.more_horiz,
-                color: Colors.white,
+              child: GestureDetector(
+                onTap: () {},
+                child: const Icon(
+                  Icons.more_horiz,
+                  color: Colors.white,
+                ),
               ),
             ),
           ],

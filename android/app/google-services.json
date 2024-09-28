@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "140502585330",
+    "project_id": "notion-clone-e3aa4",
+    "storage_bucket": "notion-clone-e3aa4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140502585330:android:858b6ba107fa8de0a3a56b",
+        "android_client_info": {
+          "package_name": "com.example.notion_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx5gnoXeMkqLT2V7wGUV2p9vBqJQIrM5E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
