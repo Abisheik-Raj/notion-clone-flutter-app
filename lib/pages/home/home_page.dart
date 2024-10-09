@@ -141,7 +141,7 @@ class _HomePageState extends State<HomePage> {
               ),
               Row(
                 children: [
-                  showPrivate
+                  !showPrivate
                       ? GestureDetector(
                           onTap: togglePrivate,
                           child: const Icon(
@@ -191,7 +191,7 @@ class _HomePageState extends State<HomePage> {
               ),
               Row(
                 children: [
-                  showPublic
+                  !showPublic
                       ? GestureDetector(
                           onTap: togglePublic,
                           child: const Icon(

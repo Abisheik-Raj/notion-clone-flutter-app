@@ -45,51 +45,49 @@ class _VitianPageState extends State<VitianPage> {
               child: SizedBox(
                 width: screenSize.width * 1,
                 height: 40,
-                child: Expanded(
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: days.length,
-                    itemBuilder: (context, index) {
-                      if (currentDay == index) {
-                        return Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              days[index],
-                              style: const TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: "PoppinsSemiBold",
-                                  fontSize: 25.5),
-                            ),
-                            const SizedBox(
-                              width: 15,
-                            ),
-                          ],
-                        );
-                      }
-
-                      return GestureDetector(
-                        onTap: () {
-                          changeCurrentDay(index);
-                        },
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              days[index],
-                              style: const TextStyle(
-                                  color: greyColor,
-                                  fontFamily: "PoppinsSemiBold",
-                                  fontSize: 25.5),
-                            ),
-                            const SizedBox(
-                              width: 15,
-                            ),
-                          ],
-                        ),
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: days.length,
+                  itemBuilder: (context, index) {
+                    if (currentDay == index) {
+                      return Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            days[index],
+                            style: const TextStyle(
+                                color: Colors.white,
+                                fontFamily: "PoppinsSemiBold",
+                                fontSize: 25.5),
+                          ),
+                          const SizedBox(
+                            width: 15,
+                          ),
+                        ],
                       );
-                    },
-                  ),
+                    }
+
+                    return GestureDetector(
+                      onTap: () {
+                        changeCurrentDay(index);
+                      },
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            days[index],
+                            style: const TextStyle(
+                                color: greyColor,
+                                fontFamily: "PoppinsSemiBold",
+                                fontSize: 25.5),
+                          ),
+                          const SizedBox(
+                            width: 15,
+                          ),
+                        ],
+                      ),
+                    );
+                  },
                 ),
               ),
             ),
